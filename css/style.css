@@ -1,0 +1,814 @@
+@charset "utf-8";
+
+/* 共通部分 */
+
+body{
+    color: #fff;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+.a{
+    background-color: #ffe6e6;
+   
+}
+
+.b{
+    background-color: #ddffdd;
+}
+h2{
+    color: #ba1b21;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    margin-top: 60px;
+    
+}
+h3, h4{
+    color: #603813;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.toiawase{
+    padding-top: 30px;
+}
+h2, h3, h4, h5{
+    font-weight: bold;
+    text-align: center;
+}
+a{
+    text-decoration: none;/* リンクアンダーライン消す */
+    color: #fff;
+}
+a:hover{
+    text-decoration: underline;/* リンクのホバー表示 */
+}
+header.common{
+    background-image: url(../images/home.svg);
+    height: 9rem;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+.sns{
+    display: flex;
+    height: 40px;
+
+    margin-left: 10px;
+}
+#insta{
+    width: 37x;
+    height: 37px;
+    padding-top: 2px;
+}
+#x{
+    width: 33px;
+    height: 33px;
+    margin: 3px 0 2px 3px;
+}
+#fb{
+    width: 38px;
+    height: 38px;
+    margin-right: 3px;
+    padding-bottom: 2px;
+}
+/* header.only-top{
+    background-image: url(../images/only-top.png);
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+} */
+p,label{
+    font-weight: normal;
+    color: #603813;
+}
+
+p{
+    text-align: center;
+}
+.dummy{
+    text-align-last: left;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.itigo{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#bgi-itigo{
+    background-image: url(../images/bgi-strawberry.svg);
+    /* background-size: cover; */
+    background-position: top;
+    width: 300px;
+    height: 129px;
+
+} 
+#itigogari{
+    margin-top: 0;
+    padding-top: 30px;
+}
+#waribiki{
+    font-weight: bold;
+}
+#yoyaku{
+    color: #f00;
+    text-align-last: center;
+    width: 90%;
+    font-size: 0.8rem;
+}
+p #tirasi{
+    margin-bottom: 0;
+}
+.introduce .caution{
+    color: #f00;
+    font-size: 0.9rem;
+    text-align: left; 
+    padding-top: 10px;
+}
+
+#product-3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#product{
+    padding-bottom: 80px;
+    padding-top: 30px;
+}
+#notice{
+    margin-bottom: 80px;
+    margin-top: 100px;
+}
+#tirashi{
+    margin-bottom: 0;
+}
+#logo{
+    width: 200px;
+    height: 120px;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#flyer{
+    margin: 0 auto 30px;
+    width: 60%;
+    cursor: pointer;
+    /* border-radius: 36px; */
+    padding-top: 0;
+    margin-top: 0;
+}
+#flyer a{
+    display: block;
+}
+#flyer a img{
+    border-bottom: 2px solid #603813;
+    border-top: 2px solid #603813;
+}
+
+#open-nav{/* ハンバーガーメニューのアイコン領域 */
+    width: 66px;
+    height: 66px;
+    position: fixed;
+    top: 15px;
+    right: 0;
+    cursor: pointer;
+    background: #ba1b21;
+    
+    text-align: center;
+    padding-top: 9px;
+    border-radius: 33px;
+    z-index: 100;
+    
+}
+.icon{/* ハンバーガーメニューのアイコン */
+    width: 3rem;
+    height: 3rem;
+    
+}
+@media screen and (max-width:799px) {
+    #nav{/* ハンバーガーメニュースライドイン */
+        /* margin-top: 3.75rem; */
+        width: 150px;
+        position: fixed;
+        right: -150px;
+        top: 80px;
+        /* background-size: 50px; */
+        background-color: #ba1b21;
+        transition: 0.3s;
+        height: 37%;
+        border-radius: 18px;
+        opacity: 0.9;
+        z-index: 100;
+    }
+}
+
+table{
+    border-spacing: 0;
+}
+table th{
+    font-weight: normal;
+}
+img{
+    max-width: 100%;
+    border: 0;
+}
+ul{
+    padding-top: 3.8rem;
+}
+li{
+    padding-bottom: 15px;
+    list-style-type: none;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+    text-align: center;
+}
+.show{/* ハンバーガーメニューのアイコン押したときの動き */
+    transform: translate3d(-150px, 0, 0);
+}
+#nav.show+#mask {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+#page-top{
+    width: 66px;
+    height: 66px;
+    border-radius: 33px;
+    background: #ba1b21;
+    position: fixed; 
+    right: 0px;
+    bottom: 18px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    line-height: 66px;
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+        #page-top::before,
+        #page-top::after {
+            content: "";
+            position: absolute;
+            top: 19px;
+            left: calc(50% - 1px);
+            width: 2px;
+            height: 30px;
+            border-radius: 1px;
+            background-color: #fff;
+            transform-origin: 50% 2px;
+            z-index: 100;
+        }
+        
+        #page-top::before {
+            transform: rotate(45deg);
+            z-index: 100;
+        }
+        
+        #page-top::after {
+            transform: rotate(-45deg);
+            z-index: 100;
+        }
+        /* #page-top.show {
+            display: block;
+            } */
+
+
+.contents{
+    border-top: 1px solid #603813;
+    /* border-bottom: 1px solid #603813; */
+    text-align: center;
+    margin-bottom: 75px;
+    margin-top: 100px;
+    
+}
+form{
+    color: #603813;
+    text-align: center;
+}
+
+.toiawase p{
+    margin: auto;
+    padding-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width: 90%;
+}
+.thanks p{
+    margin: auto;
+    padding-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width: 75%;
+}
+form div{
+    margin: auto;
+    padding-bottom: 20px;
+}
+form span{
+    color: #f00;
+}
+div .form{
+    border: #603813;
+}
+input,select,textarea{
+    border: 1px #603813 solid;
+    border-radius: 4px;
+    padding: 5px;
+    width: 75%;
+    
+}
+textarea{
+    /* margin-top: 15px; */
+    height: 120px;
+    
+}
+#submit{
+    /* border:2px #603813 solid; */
+    margin-bottom: 30px;
+    background-color: #603813;
+    color: #fff;
+    padding: 5px;
+    width: 25%;
+    transition: 0.5s;
+    margin-bottom: 80px;
+}
+#submit:hover{
+    background: #fff;
+    color: #603813;
+    transition: 0.8s;
+}
+.confirm{
+    display: flex;
+    width: 130px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.confirm2 p{
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    padding-left: 9rem;
+    text-indent: -10rem;
+    white-space: pre-wrap;
+}
+.naiyou{
+    display: inline-block;
+    width: 9rem;
+    text-align: right;
+    
+}
+
+.shusei,.sousin{
+    background-color: #603813;
+    color: #fff;
+    transition: 0.5s;
+    margin-bottom: 80px;
+    width: 60px;
+}
+.shusei{
+    margin-right: 5px;
+}
+.sousin{
+    margin-left: 5px;
+}
+.shusei:hover,.sousin:hover{
+    background: #fff;
+    color: #603813;
+    transition: 0.8s;
+}
+iframe{
+    width: 270px;
+    height: 150px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    /* pointer-events: none;スクロールオフ */
+    border: 3px solid #603813;
+    border-radius: 18px;
+    overflow: hidden;
+    
+}
+section p{
+    margin-bottom: 40px;
+}
+textarea, input, select, select option{
+    color: #603813;
+}
+.introduce{
+    width: 300px;
+    /* padding-bottom: 80px; */
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    /* margin-bottom: 10px; */
+}
+/* .introduce p{
+    margin-bottom: 30px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+    } */
+    
+    .introduce a{
+        color: #ba1b21;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    #farm{
+        background-image: url(../images/farm.png);
+        height: 270px;
+        /* width: 500px; */
+        width: 100%;
+        /* background-size: contain; */
+        background-position: bottom;
+        margin-bottom: 10px;
+    }
+    #bgi{
+        padding-bottom: 80px;
+        /* margin-bottom: 60px; */
+        /* padding-bottom: 20px; */
+        /* padding-top: 30px; */
+        background-image: url(../images/intro-bgi.png);
+        background-size: contain;
+        height: 350px;
+        /* max-width: 100%; */
+        /* width: 100%; */
+        background-position: bottom;
+        /* background-repeat: no-repeat; */
+    }
+#bgi p,#farm p{
+    margin-bottom: 10px;
+    width: 300px;
+    /* margin: auto; */
+    margin: auto;
+}
+#train{
+    background-image: url(../images/train.png);
+    background-size: contain;
+    background-position: bottom;
+    height: 380px;
+    width: 100%;
+    margin: auto;
+}
+.news{
+    width: 100%;
+}
+
+.strawberry{
+    /* width: 100%; */
+    /* height: 200px; */
+    object-fit: cover;
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+button{
+    margin: 20px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+button a{
+    background: #603813;
+    border-radius: 6px;
+    height: 20px;
+    padding: 5px;
+    transition: 0.5s;
+    
+}
+#error{
+    width: 70%;
+    margin: auto;
+}
+
+button a:hover{
+    color: #603813;
+    background: #fff;
+    text-decoration: none;
+    transition: 0.8s;
+}
+/* 下からスライド */
+.item{
+    transform: translateY(15vh);
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+.fadein{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+/* フッター */
+footer{
+    margin: 1rem,0;            
+    background-color: #ba1b21;
+}
+#SFKlogo{
+    width: 180px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+section .sns-footer{
+    padding-top: 30px;
+    padding-left: 10px;
+    /* padding-right: 10px; */
+    height: 50px;
+    width: 90px;
+    display: flex;
+    /* justify-content: end; */
+    margin-right: 10px;
+}
+.flex-footer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    width: 95%;
+    margin: auto;
+}
+.icon-footer{
+    margin: 0 2px;
+    /* margin-right: 10px; */
+}
+/* .calendar table {
+    border-collapse: collapse;
+    }
+    .calendar th,td {
+        border: 1px solid #603813;
+        padding: 5px;
+        }
+        .calendar td {
+            text-align: right;
+            }
+            .calendar form {
+                margin-bottom: 1.5rem;
+                } */
+                footer table{
+                    padding-top: 20px;
+                    /* width: 100%;  */
+                    margin-left: 30px;
+                    font-size: 0.8rem;
+                    margin-bottom: 2rem;
+                    text-align: right;
+                }
+                footer tr{
+                    height: 2rem;
+                }
+                footer table th{
+                    text-align: left;
+                }
+                footer table #address{
+                    vertical-align: top;
+                }
+                footer table td{
+                    text-align: left;
+                    border: none;
+                }
+                footer table th{
+                    border: none;
+                }
+                
+                .shozai{
+                    letter-spacing: 0.6rem;
+                    /* padding-left: 0.3rem */
+                }
+                .copyright{
+                    text-align: center;
+                    font-size: 0.75rem;
+                    padding-bottom: 2rem;
+                }
+                
+                
+.calendar{
+    margin-top: 100px;
+}
+.calendar table {
+    border-collapse: collapse;
+    color: #603813;
+    background-color: #fff;
+    text-align: center;
+    margin: auto;
+}
+.calendar th,td {
+    border: 1px solid #603813;
+    
+}
+.calendar td {
+    text-align: center;
+    padding: 13px;
+}
+.calendar th {
+    text-align: center;
+    width: 2rem;
+}
+.calendar form {
+    margin-bottom: 1.5rem;
+}
+.calendar form input{
+    color: #fff;
+}
+h5{
+    font-size: 1.2rem;
+    color: #603813;
+    padding-bottom: 15px;
+}
+.flex input{
+    /* width: 80px; */
+    background-color: #603813;
+}
+.width-small{
+    width: 4rem;
+    /* width: 100%; */
+}
+.calendar h4{
+    padding-top: 30px;
+}
+.width-calendar{
+    width: 8rem;
+}
+#reservation{
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+.iro{
+    /* color: #0b8142; */
+    color: #228B22;
+    /* color: #ba1b21; */
+    /* font-weight: bold; */
+}
+
+
+/* デスクトップ版 */
+@media (min-width:800px){
+
+header.common{
+    height: 20rem;
+    background-position: center bottom;
+    
+} 
+#nav {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+#nav ul{
+        display: flex;
+        gap: 20px;
+
+}
+/* h1{
+    height: 500px;
+    width: auto;
+    position: fixed;
+     background-position: top -3rem;
+    
+} */
+
+#SFKlogo{
+    width: 300px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+} 
+#logo{
+    width: 300px;
+    height: 240px;
+    padding-top: 0;
+}
+.item{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition: 0s;
+}
+#train {
+    width: 100%;
+    background-position: left -45% bottom -1.5em;
+    height: 400px;
+    background-size: cover;
+    
+} 
+#train p{
+    width: 90%;
+    /* justify-content: center; */
+    margin: auto;
+    /* text-align: center; */
+}
+#bgi{
+    background-size: cover;
+    background-position: left 95% bottom -1rem;
+    border-left: 1px solid #603813;
+    border-right: 1px solid #603813;
+}
+#farm {
+    width: 100%;
+    background-position: left 30% bottom 2rem;
+    height: 400px;
+}
+#farm p{
+    padding-top: 7px;
+}
+.contents{
+    border-top: 0px;
+    border-bottom: 0px;
+}
+.info{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+iframe{
+    width: 350px;
+    height: 200px;
+    overflow: hidden;
+} 
+
+footer table{
+    font-size: 1.2rem;
+}
+.news{
+    /* height: 300px; */
+    /* background-size: cover; */
+    /* background-position: top 0 right 50%; */
+    width: 30%;
+    /* margin: auto; */
+    /* width: auto; */
+}
+.newsimg{
+    text-align: center;
+}
+#open-nav{
+    display: none;
+}
+h2{
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.icon-footer{
+    width: 40px;
+    height: 40px;
+}  
+section .sns-footer{
+    width: 132px;
+    padding: 0;
+    /* margin: 0; */
+}
+footer .copyright{
+    font-size: 1rem;
+}
+form{
+    width: 50%;
+    margin: auto;
+    /* justify-content: space-between; */
+}
+form.flex{
+    gap: 20px;
+    
+}
+.shusei,.sousin{
+    width: 90px;
+}
+.confirm{
+    width: 190px;
+    margin: auto;
+    margin-top: 50px;
+}
+.confirm2 p{
+    width: 40%;
+    margin: auto;
+    
+}
+.iro{
+    font-weight: bold;
+}
+#page-top{
+    right: 20px;
+}
+.wp{
+    background-image: url(../images/logo.svg),url(../images/logo.svg);
+    background-size: 300px 161.7px;
+    background-position: left 50px top,right 50px top;
+    background-repeat:repeat-y;
+    
+}/* 161.7pxはproduct.phpのdiv.wpの高さ eventでもいい感じにbgiが収まったので数値変更しなかった */
+}/* @media (min-width:800px) */
+
